@@ -320,7 +320,7 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
             public void run() {
                 mLoadingMessageSnackbar = Snackbar.make(
                     HelloArActivity.this.findViewById(android.R.id.content),
-                    "Searching for surfaces...", Snackbar.LENGTH_INDEFINITE);
+                    "Scanning for a flat surface", Snackbar.LENGTH_INDEFINITE);
                 mLoadingMessageSnackbar.getView().setBackgroundColor(0xbf323232);
                 mLoadingMessageSnackbar.show();
             }

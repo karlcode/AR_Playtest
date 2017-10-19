@@ -176,8 +176,9 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
     }
 
     private void onSingleTap(MotionEvent e) {
-        Toast.makeText(this, "I LOVE AR", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "A Toast to AR", Toast.LENGTH_LONG).show();
         // Queue tap if there is space. Tap is lost if queue is full.
+        //Inserts specified element at tail of this queue if possible to do this immediately without exceeding queues capacity
         mQueuedSingleTaps.offer(e);
     }
 
@@ -230,6 +231,7 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
 
             // Handle taps. Handling only one tap per frame, as taps are usually low frequency
             // compared to frame rate.
+            //poll retrieves and removes the head of this queue or returns null if empty
             MotionEvent tap = mQueuedSingleTaps.poll();
             if (tap != null && frame.getTrackingState() == TrackingState.TRACKING) {
                 for (HitResult hit : frame.hitTest(tap)) {
@@ -322,7 +324,7 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
                 mLoadingMessageSnackbar = Snackbar.make(
                     HelloArActivity.this.findViewById(android.R.id.content),
                     "Scanning for a flat surface", Snackbar.LENGTH_INDEFINITE);
-                mLoadingMessageSnackbar.getView().setBackgroundColor(0xbf323232);
+                mLoadingMessageSnackbar.getView().setBackgroundColor(0xfffd5c63);
                 mLoadingMessageSnackbar.show();
             }
         });

@@ -176,6 +176,7 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
     }
 
     private void onSingleTap(MotionEvent e) {
+        Toast.makeText(this, "I LOVE AR", Toast.LENGTH_LONG).show();
         // Queue tap if there is space. Tap is lost if queue is full.
         mQueuedSingleTaps.offer(e);
     }

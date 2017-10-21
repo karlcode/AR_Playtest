@@ -176,7 +176,7 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
     }
 
     private void onSingleTap(MotionEvent e) {
-        Toast.makeText(this, "A Toast to AR", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Your hit worked!", Toast.LENGTH_LONG).show();
         // Queue tap if there is space. Tap is lost if queue is full.
         //Inserts specified element at tail of this queue if possible to do this immediately without exceeding queues capacity
         mQueuedSingleTaps.offer(e);
@@ -192,7 +192,7 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
 
         // Prepare the other rendering objects.
         try {
-            mVirtualObject.createOnGlThread(/*context=*/this, "sub_wrxsti_11.obj", "nondamage.png");
+            mVirtualObject.createOnGlThread(/*context=*/this, "untitled.obj", "untitled.png");
             //mVirtualObject.createOnGlThread(/*context=*/this, "andy.obj", "andy.png");
             mVirtualObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
 

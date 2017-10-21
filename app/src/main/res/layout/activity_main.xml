@@ -24,6 +24,9 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="top" />
-
-
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="MY FIRST AR APP"/>
 </RelativeLayout>

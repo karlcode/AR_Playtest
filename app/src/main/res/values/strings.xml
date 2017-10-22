@@ -16,4 +16,8 @@
 -->
 <resources>
     <string name="app_name">AR Playtest</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_navigation">Navigation</string>
+
 </resources>

@@ -16,6 +16,19 @@
 
 package com.google.ar.core.examples.java.helloar;
 
+import android.content.Intent;
+import android.opengl.GLES20;
+import android.opengl.GLSurfaceView;
+import android.os.Bundle;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Toast;
+
 import com.google.ar.core.Config;
 import com.google.ar.core.Frame;
 import com.google.ar.core.Frame.TrackingState;
@@ -29,18 +42,6 @@ import com.google.ar.core.examples.java.helloar.rendering.ObjectRenderer.BlendMo
 import com.google.ar.core.examples.java.helloar.rendering.PlaneAttachment;
 import com.google.ar.core.examples.java.helloar.rendering.PlaneRenderer;
 import com.google.ar.core.examples.java.helloar.rendering.PointCloudRenderer;
-
-import android.opengl.GLES20;
-import android.opengl.GLSurfaceView;
-import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -340,5 +341,11 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
                 mLoadingMessageSnackbar = null;
             }
         });
+    }
+    public void loginActivity(View view){
+        Intent login = new Intent(this, LoginActivity.class);
+        startActivity(login);
+
+
     }
 }
